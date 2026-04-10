@@ -1,0 +1,46 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent; /* Let body nebula gradient show through */
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+.right-panel {
+  width: 280px;
+  border-left: 1px solid rgba(0, 212, 255, 0.1);
+  background: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(12px);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+/* E-Stop full screen overlay */
+.estop-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(239, 68, 68, 0.1);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+  pointer-events: none;
+  border: 3px solid var(--danger);
+  box-shadow: inset 0 0 80px rgba(239, 68, 68, 0.15), 0 0 40px rgba(239, 68, 68, 0.3);
+}
+
